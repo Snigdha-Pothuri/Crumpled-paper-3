@@ -15,7 +15,8 @@ function preload()
 }                                          
 
 function setup() {
-	createCanvas(1000, 400);
+  createCanvas(1000, 400); 
+  
 
   engine = Engine.create();
   world = engine.world;
@@ -28,9 +29,9 @@ function setup() {
 	//World.add(world, packageBody);
 	
 	paper1=new paper (50,100,30); 
-	box1= new dustbin(800,300,20,200);
-	box2=new dustbin(600,300,20,200);
-  box3=new dustbin(700,360,210,30); 
+	box1= new dustbin(800,270,200,200);
+//	box2=new dustbin(600,300,20,200);
+ // box3=new dustbin(700,10,210,30); 
   
   slingshot = new SlingShot(paper1.body,{x:200, y:200});
 	//Create a Ground
@@ -46,12 +47,12 @@ function setup() {
 
 function draw() {
   rectMode(CENTER);
-  background(0);
+  background("white");
 
   paper1.display();
   box1.display();
-  box2.display();
-  box3.display();
+ // box2.display();
+ // box3.display();
 
   ground.display();
   slingshot.display();
